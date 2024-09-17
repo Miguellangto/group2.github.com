@@ -1,0 +1,175 @@
+/* Styles for the fixed header */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #478468; /* Set a color here */
+  padding: 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px; /* Adjust this value as needed */
+}
+
+/* Styles for the navigation links */
+.navigation-links,
+.right-side-element {
+  display: flex;
+  align-items: center; /* Align links vertically */
+}
+
+.navigation-links a,
+.right-side-element a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px; /* Set a specific font size */
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 700;
+  margin: 0 10px; /* Add equal margin around each link */
+  padding: 8px 15px; /* Add padding to increase clickable area */
+  border-radius: 5px;
+  transition: color 0.5s ease;
+}
+
+/* Updated styles for selected link */
+.navigation-links a.active,
+.navigation-links a:hover,
+.right-side-element a.active,
+.right-side-element a:hover {
+  color: rgb(167, 219, 219);
+}
+
+/* Styles for the search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+#search-input {
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px; /* Add margin to the right of the input field */
+  width: 200px;
+}
+
+.search-bar button {
+  padding: 6px 12px;
+  background-color: #de3952;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: -50px;
+}
+
+.search-bar button:hover {
+  background-color: #ffa600;
+  transform: scale(1.05);
+}
+
+.right-side-element {
+  /* Adjust margin-left to position the "Group 2" link */
+  margin-right: 50px; /* Adjust this value as needed */
+  background-color: #133f39;
+  padding: 0px 1px;
+  border-radius: 5px;
+}
+
+/* Style the button */
+#backToTopBtn {
+  position: fixed; /* Fixed at the bottom-right corner */
+  bottom: 20px;
+  right: 20px;
+  z-index: 99; /* On top of other elements */
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0; /* Initial opacity */
+  visibility: hidden; /* Hidden initially */
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* Slower fade in/out effect */
+}
+
+#backToTopBtn.show {
+  opacity: 1; /* Full opacity */
+  visibility: visible; /* Make it visible */
+}
+
+#backToTopBtn:hover {
+  background-color: #333; /* Darker background on hover */
+}
+
+/* Footer styles */
+.footer {
+  background-color: #343a40; /* Dark background color */
+  color: #ffffff; /* White text color */
+  padding: 20px 0; /* Add padding as needed */
+  position: relative;
+  width: 100%; /* Ensure footer spans the full width */
+  bottom: 0; /* Stick to the bottom if needed */
+}
+
+/* Center the container inside the footer */
+.footer .container {
+  max-width: 1140px; /* Set a max width for the content inside */
+  margin: 0 auto; /* Center the container */
+}
+
+.footer .row {
+  margin-left: 0; /* Remove default left margin */
+  margin-right: 0; /* Remove default right margin */
+}
+
+.footer .col-md-3 {
+  margin-bottom: 20px; /* Add spacing between columns */
+}
+
+.footer .btn-social {
+  border: 1px solid #ffffff; /* White border for social buttons */
+  color: #ffffff; /* White icon color */
+}
+
+.footer .btn-social:hover {
+  background-color: #ffffff; /* White background on hover */
+}
+
+/* Ensure the header doesn't overlap the content */
+main {
+  margin-top: 80px; /* Adjust this value based on your header’s height */
+  margin-bottom: 60px; /* Adjust this value based on your footer’s height */
+}
+
+/* Center the text inside h1 */
+h1 {
+  text-align: center;
+}
+
+/* Basic reset for html and body */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Flexbox wrapper to push footer to bottom */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+main {
+  flex: 1; /* Pushes footer to the bottom */
+}
+
+/* Style for active navigation link */
+.active {
+  color: orange; /* Highlight color */
+  font-weight: bold; /* Optional: makes the text bold */
+}
